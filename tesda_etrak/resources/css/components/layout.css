@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+.sidebar-link {
+    @apply text-gray-700 hover:text-white hover:bg-sky-400 flex items-center p-2 rounded-md space-x-3;
+}
+
+.sidebar-link-mobile {
+    @apply text-gray-700 hover:text-white hover:bg-sky-400 flex items-center p-2 rounded-md space-x-3;
+}
+
+/* Style the tab */
+.tab {
+    @apply float-left w-full;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tablinks {
+    @apply block bg-inherit text-black px-[22px] py-[16px] w-full border-none outline-none text-left cursor-pointer duration-[0.3s];
+}
+
+/* Change background color of buttons on hover */
+.tab .tablinks:hover {
+    @apply bg-blue-200
+    /* @apply bg-[#ddd]; */
+}
+
+/* Create an active/current "tab button" class */
+.tab .tablinks.active {
+    @apply bg-[#808080];
+}

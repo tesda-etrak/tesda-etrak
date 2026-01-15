@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+@tailwind utilities;
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@font-face {
+    font-family: 'FremontBold';
+    src: url('../fonts/FremontBold.woff2') format('woff2'), 
+    url('../fonts/FremontBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@layer components {
+    body {
+        @apply bg-gray-50 text-gray-900;
+    }
+
+    h1 {
+        @apply font-bold text-7xl;
+    }
+
+    .btn {
+        @apply border font-bold px-4 py-2 rounded-md;
+    }
+
+    .btn-sm {
+        @apply border font-bold px-3 py-1 rounded-md;
+    }
+    
+    .btn-primary {
+        @apply bg-blue-500 hover:bg-blue-700 text-white;
+    }
+    
+    .btn-secondary {
+        @apply bg-gray-500 hover:bg-gray-600 text-white;
+    }
+
+    .btn-danger {
+        @apply bg-red-500 hover:bg-red-700 text-white;
+    }
+
+    .btn-primary-modal {
+        @apply bg-blue-600 hover:bg-blue-500 text-white inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold shadow-xs sm:ml-3 sm:w-auto;
+    }
+
+    .btn-secondary-modal {
+        @apply bg-white hover:bg-gray-100 ring-gray-300 text-gray-900 mt-3 inline-flex w-full justify-center rounded-md px-3 py-2 text-sm font-semibold ring-1 shadow-xs ring-inset sm:mt-0 sm:w-auto;
+    }
+
+    .btn-secondary-modal-solid {
+        @apply bg-gray-500 hover:bg-gray-600 text-white font-semibold inline-flex w-full justify-center mt-3 rounded-md px-3 py-2 text-sm shadow-xs lg:mt-0 lg:w-auto;
+    }
+
+    .btn-danger-modal {
+        @apply bg-red-600 hover:bg-red-500 text-white font-semibold inline-flex w-full justify-center mt-3 rounded-md px-3 py-2 text-sm shadow-xs lg:mt-0 lg:w-auto;
+    }
+    
+    .form-label {
+        @apply font-semibold text-lg text-gray-700;
+    }
+
+    .form-input {
+        @apply bg-white border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-300 border-2 mt-1 p-2 rounded-lg shadow-sm w-full;
+    }
+
+    .form-radio {
+        @apply text-blue-500 border-gray-300 focus:ring-blue-500;
+    }
+}
+
+dt {
+    @apply font-semibold;
+}
+dd {
+    @apply mb-5;
+}
+dt, dd {
+    @apply text-xl font-[Arial];
+}
+
+.collapsible {
+    @apply bg-gray-400 text-white cursor-pointer p-3 w-full text-left text-lg;
+}
+
+.expanded, .collapsible:hover {
+    @apply bg-gray-500;
+}
+
+.content {
+    @apply bg-gray-300 p-3 overflow-hidden;
+}
